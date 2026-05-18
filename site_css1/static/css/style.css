@@ -1,0 +1,73 @@
+body{
+
+    font-family: Arial, sans-serif;
+    display: flex;
+    background: bisque;
+
+
+}
+
+.menu {
+    width: 200px;
+    background-color: #520606;
+    padding: 20px;
+    height: 100vh;
+    border-radius: 10px;
+}
+
+.conteudo {
+    flex: 1;
+    padding: 20px;
+}
+
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.menu ul li a {
+    text-decoration: none;
+    color: #520606;
+    display: block;
+    padding: 10px 20px;
+    background-color: bisque;
+    border-radius: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+
+
+}
+.au4 {
+    margin-left: 30px;
+    color: #520606;
+}
+
+.btn {
+    position: relative;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: bisque;
+    background: none;
+    border: 2px solid bisque;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .liquid {
+    background: linear-gradient(#520606 0 0) no-repeat calc(200% - var(--p, 0%))
+      100% / 200% var(--p, 0.2em);
+    transition: 0.3s var(--t, 0s),
+      background-position 0.3s calc(0.3s - var(--t, 0s));
+  }
+  
+  .liquid:hover {
+    --p: 100%;
+    --t: 0.3s;
+    color: bisque;
+  }
+  
