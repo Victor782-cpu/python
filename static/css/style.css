@@ -1,82 +1,102 @@
 body {
-    text-align: center;
     font-family: Arial, sans-serif;
-    background-color: #a8abec;
+    max-width: 720px;
+    margin: 24px auto;
+    padding: 0 16px;
+    color: #1e293b;
 }
-
 
 h1 {
-    margin-top: 20px;
+    margin-bottom: 4px;
 }
 
+.subtitulo {
+    color: #64748b;
+    margin-top: 0;
+}
 
-#calculator {
-    display: inline-block;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+th,
+td {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 10px 8px;
     text-align: left;
-    border: 1px solid #0008a4;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 320px;
-    margin: 0 auto;
-    border-radius: 20px;
 }
 
+th {
+    background: #f1f5f9;
+}
+
+.acoes {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.acoes form {
+    margin: 0;
+}
+
+a {
+    color: #2563eb;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn-danger {
+    background: #dc2626;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
 .form-grupo {
     margin-bottom: 12px;
 }
 
-
 label {
     display: block;
-    margin-bottom: 4px;
     font-weight: bold;
+    margin-bottom: 4px;
 }
 
-
-input[type="number"],
-select {
+input {
     width: 100%;
     padding: 8px;
-    font-size: 18px;
     box-sizing: border-box;
-    border-radius: 20px;
-    border: 1px solid #0008a4;
 }
 
-
-button {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
+button[type="submit"] {
+    padding: 10px 18px;
+    background: #16a34a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
-    margin-top: 8px;
-    border-radius: 20px;
-    border: 1px solid #0008a4;
-    background-color: #a8abec;
 }
 
-
-.resultado {
-    margin-top: 16px;
-    padding: 12px;
-    background: #f0f4f8;
-    border-radius: 4px;
-    text-align: right;
-    font-size: 18px;
+.erro {
+    color: #b91c1c;
+    background: #fef2f2;
+    padding: 10px;
+    border-radius: 6px;
 }
 
-
-.resultado strong {
-    display: block;
-    text-align: left;
-    margin-bottom: 6px;
-    font-size: 14px;
-}
-
-
-a {
-    display: inline-block;
-    margin-top: 12px;
-    color: #2563eb;
+.vazio {
+    color: #64748b;
+    font-style: italic;
 }
