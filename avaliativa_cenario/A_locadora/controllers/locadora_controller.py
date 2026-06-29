@@ -24,7 +24,7 @@ def cadastrar():
     veiculos = Veiculo.listar()
 
     if request.method == "POST":
-        loc = Locadora(cliente_id = request.form.get(["cliente_id"],
+        loc = Locacao(cliente_id = request.form.get(["cliente_id"],
         veiculo_id = request.form.get(["veiculo_id"]),
         data_inicio = request.form.get(["data_inicio"]),
         data_fim = request.form.get(["data_fim"]),
