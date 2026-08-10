@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{% if tarefa %}Editar{% else %}Nova{% endif %} Tarefa</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label class="form-label">Título</label>
+        <input type="text" name="titulo" class="form-control" value="{{ tarefa.titulo if tarefa else '' }}" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Descrição</label>
+        <textarea name="descricao" class="form-control">{{ tarefa.descricao if tarefa else '' }}</textarea>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Status</label>
+        <select name="status" class="form-select" required>
+            <option value="Pendente" {% if tarefa and tarefa.status == 'Pendente' %}selected{% endif %}>Pendente</option>
+            <option value="Em andamento" {% if tarefa and tarefa.status == 'Em andamento' %}selected{% endif %}>Em andamento</option>
+            <option value="Concluída" {% if tarefa and tarefa.status == 'Concluída' %}selected{% endif %}>Concluída</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+{% endblock %}
